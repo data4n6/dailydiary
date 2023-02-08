@@ -26,7 +26,7 @@ def update_me(url):
     file = os.path.basename(__file__)
     if isUpToDate(__file__, url+file) == False:
         print("Updates found...")
-        update_files(__file__, url+file)
+        update_files(__file__, url+file,file)
         return True
     else:
         return False
@@ -43,8 +43,8 @@ def isUpToDate(fileName,url):
     else:
         return False
 
-def update_files(fileName, url):
-    for i in tqdm(range(1), desc=f"Downloading Updates for {fileName}..."):
+def update_files(fileName, url, file):
+    for i in tqdm(range(1), desc=f"Downloading Updates for {file}..."):
         urllib.request.urlretrieve(fileName, url)
 
 
