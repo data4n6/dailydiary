@@ -45,7 +45,7 @@ def isUpToDate(fileName,url):
 
 def update_files(fileName, url):
     for i in tqdm(range(1), desc=f"Downloading Updates for {fileName}..."):
-        urllib.request.urlretrieve(url, path)
+        urllib.request.urlretrieve(fileName, url)
 
 
 #def checkForUpdates(fileName):
