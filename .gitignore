@@ -6,6 +6,9 @@ __pycache__/
 # Database Directory
 db/
 
+# Jupyter Files
+*.ipynb
+
 # Distribution / packaging
 .Python
 build/
