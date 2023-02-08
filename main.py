@@ -11,7 +11,7 @@ def isUpToDate(fileName, url):
 
 	urlcode = requests.get(url).text
 	urlhash = hashlib.sha256((urlcode).encode('utf-8')).hexdigest()
-	
+	print(f,hash,url,urlhash)
 	if hash == urlhash:
 		return True
 	else:
