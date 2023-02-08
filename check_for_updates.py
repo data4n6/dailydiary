@@ -14,9 +14,8 @@ def update():
     ''' Starts the update process'''
 
     url = "https://raw.githubusercontent.com/data4n6s/dailydiary/main/"
-    print("Checking for updates.")
+    print("Checking for updates...")
     if update_me(url) == True:
-        print("Updated check_for_updates.py...")
         update()
     else:
         print("First Step Complete...")
@@ -44,15 +43,16 @@ def isUpToDate(fileName,url):
     else:
         return False
 
-def update_files(path, url):
-    for i in tqdm(range(1), desc="Downloading Updates..."):
+def update_files(fileName, url):
+    for i in tqdm(range(1), desc=f"Downloading Updates for {fileName}..."):
         urllib.request.urlretrieve(url, path)
 
 
-def checkForUpdates(fileName):
-
-    if isUpToDate(fileName, url) == False:
-        update(path, url)
-        return True
-    else:
-        return False
+#def checkForUpdates(fileName):
+#
+#
+#    if isUpToDate(fileName, url) == False:
+#        update(path, url)
+#        return True
+#    else:
+#        return False
