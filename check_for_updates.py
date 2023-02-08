@@ -14,16 +14,19 @@ def update():
     ''' Starts the update process'''
 
     url = "https://raw.githubusercontent.com/data4n6s/dailydiary/main/"
+    print("Checking for updates.")
     if update_me(url) == True:
-        print("Updates found...")
+        print("Updated check_for_updates.py...")
+        update()
     else:
-        print("Checking for updates. First Step Complete...")
+        print("First Step Complete...")
 
 def update_me(url):
     ''' Checks if the Update file: check_for_updates.py has any updates'''
 
     file = os.path.basename(__file__)
     if isUpToDate(__file__, url+file) == False:
+        print("Updates found...")
         update_files(__file__, url+file)
         return True
     else:
