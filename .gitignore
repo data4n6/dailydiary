@@ -5,6 +5,7 @@ __pycache__/
 
 # Database Directory
 db/
+python-files/
 
 # Jupyter Files
 *.ipynb
