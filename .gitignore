@@ -5,7 +5,12 @@ __pycache__/
 
 # Database Directory
 db/
+
+# Temporary Test Directory
 python-files/
+
+# Sensitive Data
+config.py
 
 # Jupyter Files
 *.ipynb
