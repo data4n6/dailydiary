@@ -6,8 +6,6 @@ import urllib.request
 from config import token, username, url, repo
 from tqdm import tqdm
 
-
-
 version = "v1.0.1"
 g = Github(token)
 user_data = requests.get(url, auth=(username,token)).json()
